@@ -1,7 +1,7 @@
 
-targets : vis prog pick zap
+targets : vis prog pick zap diff
 
-objs = ttyin.o p.o pick.o zap.o
+objs = ttyin.o p.o pick.o zap.o idiff.o
 
 vis : 
 	cc -o vis1.o vis1.c 
@@ -18,6 +18,9 @@ pick : $(objs)
 
 zap : $(objs) 
 	cc -o zp.o ttyin.o zap.o
+
+diff : $(objs)
+	cc -o idf.o ttyin.o idiff.o
 
 .PHONY : cleanobj
 cleanobj :
