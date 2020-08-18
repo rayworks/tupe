@@ -2,11 +2,14 @@
 targets : vis prog pick zap diff
 
 objs = ttyin.o p.o pick.o zap.o idiff.o
+vs1 = vis1.o
+vs2 = vis2.o
+vs3 = vis3.o
 
-vis : 
-	cc -o vis1.o vis1.c 
-	cc -o vis2.o vis2.c
-	cc -o vis3.o vis3.c
+vis : $(vs1) $(vs2) $(vs3)
+	cc -o vs1.o $(vs1)
+	cc -o vs2.o $(vs2)
+	cc -o vs3.o $(vs3)
 
 ttyin.o : ttyin.h
 
