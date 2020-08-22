@@ -8,21 +8,6 @@
 
 char *progname;
 
-// void error(char *s1, char *s2)
-// {
-//     extern int errno;
-//     // sys_nerr;
-//     // extern char *sys_errlist, *progname;
-
-//     if (progname)
-//         fprintf(stderr, "%s: ", progname);
-//     fprintf(stderr, s1, s2);
-//     if (errno > 0 && errno < sys_nerr)
-//         fprintf(stderr, "(%s)", sys_errlist[errno]);
-//     fprintf(stderr, "\n");
-//     exit(1);
-// }
-
 int main(int argc, char const *argv[]) /* cp: copy f1 to f2 */
 {
     int f1, f2, n;
