@@ -1,5 +1,5 @@
 
-targets : simple spell chkmail save
+targets : simple spell chkmail save waitfile timeout
 
 objs = ../progio/ttyin.o spname.o 
 comm = err.o
@@ -24,6 +24,12 @@ chkmail : $(comm) checkmail.o
 
 save : $(comm) sv.o
 	cc -o _save.o $(comm) sv.o
+
+waitfile : $(comm) waitfile.o
+	cc -o _wtfile.o $(comm) waitfile.o
+
+timeout :  $(comm) timeout.o
+	cc -o _timeout.o $(comm) timeout.o
 
 
 .PHONY : cleanobj
