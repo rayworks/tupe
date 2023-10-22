@@ -1,6 +1,7 @@
 extern char *progname;
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void error(char *s1, char *s2)
 {
